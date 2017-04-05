@@ -1,0 +1,16 @@
+<% if signed_in? %>
+
+<!-- dashboard -->
+<p>dashboard</p>
+
+<% else %>
+	<center>
+		<h1>welcome to meow app</h1>
+		<h3>where your one stop social entertainment</h3>
+	<center>
+
+	<div class="welcome-page">
+      	<%= link_to "Sign in", sign_in_path, class: "btn btn-primary" %>
+      	<%= link_to t(".sign_up"), sign_up_path, class: "btn btn-primary" %>
+    </div> 
+<% end %>
