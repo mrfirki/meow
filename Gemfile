@@ -19,6 +19,17 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+#add clearance
+gem 'clearance'
+#add google api
+gem 'google-api-client', '~> 0.8.2'
+#add trollop
+gem 'trollop'
+#add youtube api
+gem 'yt', '~> 0.28.0'
+#add figaro
+gem 'figaro'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
