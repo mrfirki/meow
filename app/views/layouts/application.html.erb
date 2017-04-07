@@ -6,9 +6,54 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <!-- Load the Client component. -->
+    <script src="https://js.braintreegateway.com/web/3.11.1/js/client.min.js"></script>
+      <!-- Load the Hosted Fields component. -->
+    <script src="https://js.braintreegateway.com/web/3.11.1/js/hosted-fields.min.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<center>
+	<body class="body">
+
+	<div>
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav">
+	                    <li>
+	                        <%= link_to "Home", root_path %>
+	                    </li>
+	                    <% if signed_in? %>
+	                    <li>
+	                        <%= link_to "Profile", user_path(current_user) %>
+	                    </li>
+	                </ul>
+
+	                <ul class="nav navbar-nav navbar-right">
+	                  <li >
+	                      <%= link_to "Sign out", sign_out_path, method: :delete %>
+	                  </li>
+	                </ul>
+	                    <% end %>  
+	            </div>            
+	        </div>        
+	    </nav>
+  	<div>
+
+	   	<div style="padding-top: 100px;">
+	      <section> 
+	        <div id="flash">
+	          <% flash.each do |key, value| %>
+	        <div class="flash <%= key %>"><%= value %></div>
+	          <% end %>
+	        </div>
+	      </section>
+        	<%= yield %>
+    	</div>
+	  </body>
+	</center> 
 </html>
+
+
+ 
