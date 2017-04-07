@@ -1,0 +1,15 @@
+<h1>Tumblr#index</h1>
+<p>Find me in app/views/tumblr/index.html.erb</p>
+
+<% client = Tumblr::Client.new %>
+<% x = client.tagged "cat" %>
+<% x[0..10].each do |post| %>
+	<%= post["blog_name"] %><br>
+		<% if post.keys.include?("photos") %> 
+			<img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 500 }['url'] %>">
+		<% end %>
+		<% if /[^\x00-\x7F]+/.match(post["caption"]) == nil %>
+			<%= raw post['caption'] %><br>
+		<% end %>
+			<br>
+<% end %>
