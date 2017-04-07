@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'twitter/show'
+
 	root 'welcome#index'
 
 	resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -8,13 +10,13 @@ Rails.application.routes.draw do
 	  resource :password,
 	    controller: "clearance/passwords",
 	    only: [:create, :edit, :update]
-end
+	end
 
-get "/sign_in" => "clearance/sessions#new", as: "sign_in"
-delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
-get "/sign_up" => "clearance/users#new", as: "sign_up"
-#*** end of default routes of Clearance
+	get "/sign_in" => "clearance/sessions#new", as: "sign_in"
+	delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
+	get "/sign_up" => "clearance/users#new", as: "sign_up"
+	#*** end of default routes of Clearance
 
-resources :users, controller: "users", only: :show
+	resources :users, controller: "users", only: :show
 	
 end

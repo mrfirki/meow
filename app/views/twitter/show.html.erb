@@ -1,7 +1,9 @@
-<% cache "tweet#{Date.today}" do %>
-	<% $twitter_client.search("cat filter:media :)", result_type: "popular", lang:"en" ).take(5).each do |tweet| %>
+<%# cache "tweet#{Date.today}" do %>
+	<% $twitter_client.search("cat filter:media ", result_type: "popular", lang: "en").take(5).each do |tweet| %>
 		<%= image_tag(tweet.user.profile_image_uri) %>
+		<br>
 		<%= tweet.user.name %>
+		<br>
 	  <%= tweet.text %>
 		
 	  <%# tweet.profile_image_uri %>
@@ -10,7 +12,7 @@
 	  <%#= p tweet.to_yaml%>
 	  <br>
 	<% end %>
-<% end %>
+<%# end %>
 
 
 
@@ -20,7 +22,7 @@
 			twttr.widgets.createTimeline(
 		  {
 		    sourceType: 'widget',
-		    widgetId: '<%= $cat %>'
+		    widgetId: '849570458475175936'
 		  },
 		  document.getElementById('timeline'),
 		  {
