@@ -1,2 +1,43 @@
-<h1>Twitter#show</h1>
-<p>Find me in app/views/twitter/show.html.erb</p>
+<% cache "tweet#{Date.today}" do %>
+	<% $twitter_client.search("cat filter:media :)", result_type: "popular", lang:"en" ).take(5).each do |tweet| %>
+		<%= image_tag(tweet.user.profile_image_uri) %>
+		<%= tweet.user.name %>
+	  <%= tweet.text %>
+		
+	  <%# tweet.profile_image_uri %>
+
+	  <%#= p tweet.inspect %>
+	  <%#= p tweet.to_yaml%>
+	  <br>
+	<% end %>
+<% end %>
+
+
+
+<script>
+	window.twttr.ready(
+		function(twttr){
+			twttr.widgets.createTimeline(
+		  {
+		    sourceType: 'widget',
+		    widgetId: '<%= $cat %>'
+		  },
+		  document.getElementById('timeline'),
+		  {
+		    width: '450',
+		    height: '700',
+		    related: 'twitterdev,twitterapi'
+		  }).then(function (el) {
+		    console.log('Embedded a timeline.')
+		  });
+  	}
+	);
+</script>     
+
+<%#= $twitter_client.limit %>
+
+
+<div id='timeline'></div>
+
+          
+          
