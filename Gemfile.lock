@@ -45,8 +45,13 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
+    autoprefixer-rails (6.7.7)
+      execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     buftok (0.2.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -245,6 +250,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   byebug
   clearance
   figaro
