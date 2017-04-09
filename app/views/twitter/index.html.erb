@@ -1,5 +1,5 @@
 <%# cache "tweet#{Date.today}" do %>
-	<% $twitter_client.search("cat filter:media ", result_type: "popular", lang: "en").take(5).each do |tweet| %>
+	<% $twitter_client.search("cat filter:media ", result_type: "popular", lang: "en").take(8).each do |tweet| %>
 		<%= image_tag(tweet.user.profile_image_uri) %>
 		<br>
 		<%= tweet.user.name %>
