@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'cat/index'
-  get 'twitter/show'
+  get 'twitter/index'
+  get 'tumblr/index'
 
 	root 'welcome#index'
 
