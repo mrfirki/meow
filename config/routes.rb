@@ -19,5 +19,5 @@ Rails.application.routes.draw do
 	get "/sign_up" => "clearance/users#new", as: "sign_up"
 	#*** end of default routes of Clearance
 
-	resources :users, controller: "users", only: :show
+	resources :users, controller: "users", only: [:show, :edit]
 end
