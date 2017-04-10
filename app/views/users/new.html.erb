@@ -9,21 +9,18 @@
   </div>
 
   <div class="col-md-3 border">
-
     <div id="clearance" class="sign-up">
       <h2><%= t(".title") %></h2>
       
-      <form class="form-horizontal">
-        <%= form_for @user  do |form| %>
+ 
+        <%= form_for @user, html: { class: "form-horizontal" }  do |form| %>
           <%= render partial: '/users/form', object: form %>
-
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <%= form.submit class: "btn btn-default pull-right"%>
             </div>
           </div>
         <% end %>
-      </form>
     </div>
   </div>
   
