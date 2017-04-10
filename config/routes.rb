@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'twitter/index'
   get 'tumblr/index'
 
-	root 'welcome#index'
+	root 'users/new'
 
 	resources :passwords, controller: "clearance/passwords", only: [:create, :new]
 	resource :session, controller: "clearance/sessions", only: [:create]
