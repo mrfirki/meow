@@ -45,3 +45,27 @@
 body .carousel-indicators .active {
   background-color: green;
 }
+
+.tumblr_images { 
+                height: auto;
+                width: auto;
+                max-width: 230px;
+                max-height: 210px;
+               padding:1px;
+               border:3px solid #5674a5;
+               background-color: #5674a5;
+               border-radius: 10px;
+
+                         }
+body .carousel-indicators {
+  color: auto;
+  bottom: -35px;
+
+  .active {
+    background-color: gray;
+  }
+
+  li {
+    border: 1px solid black;  
+  }
+}
