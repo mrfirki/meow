@@ -1,7 +1,7 @@
 require 'google/api_client'
 require 'trollop'
 
-class CatController < ApplicationController
+class WelcomeController < ApplicationController
  	def index
 		@search_results = search_video
 	end	
