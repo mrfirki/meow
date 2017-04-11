@@ -1,0 +1,2 @@
+class AddRemoveColumn < ApplicationRecord
+end

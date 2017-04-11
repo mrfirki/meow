@@ -2,18 +2,15 @@ require 'google/api_client'
 require 'trollop'
 
 class WelcomeController < ApplicationController
-
-	def index
-		if params[:search_term]
-			@search_results = search_video(params[:search_term])
-		end
+ 	def index
+		@search_results = search_video
 	end	
 
 	private
 
 	def get_service
     	client = Google::APIClient.new(
-	    :key => ENV['DEVELOPER_KEY'],
+	    :key => ENV['YOUTUBE_DEVELOPER_KEY'],
 		    :authorization => nil,
 		    :application_name => $PROGRAM_NAME,
 		    :application_version => '1.0.0'
@@ -23,9 +20,9 @@ class WelcomeController < ApplicationController
 	    return client, youtube
 	end
 
-	def search_video(term)
+	def search_video
 		opts = Trollop::options do
-		    opt :q, 'Search term', :type => String, :default => term
+		    opt :q, 'Search term', :type => String, :default => 'cats'
 		    opt :max_results, 'Max results', :type => :int, :default => 5
 		  end
 
@@ -40,7 +37,7 @@ class WelcomeController < ApplicationController
 			  	:order => 'relevance',
 			  	:order => 'date',
 			    :part => 'snippet',
-			  	:q => opts[:q],
+			  	:q => 'funny cats',
 			    :maxResults => opts[:max_results]
 			  }
 			)
