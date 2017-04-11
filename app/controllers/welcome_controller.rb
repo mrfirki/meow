@@ -4,13 +4,13 @@ require 'trollop'
 class WelcomeController < ApplicationController
  	def index
 		@search_results = search_video
-	end	
+	end
 
 	private
 
 	def get_service
     	client = Google::APIClient.new(
-	    :key => ENV['DEVELOPER_KEY'],
+	    :key => ENV['YOUTUBE_DEVELOPER_KEY'],
 		    :authorization => nil,
 		    :application_name => $PROGRAM_NAME,
 		    :application_version => '1.0.0'

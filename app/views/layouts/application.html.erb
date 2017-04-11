@@ -17,8 +17,8 @@
 
 <center>
 	<body class="body">
-	   	<div style="padding-top: 100px;">
-	      <section> 
+	   	<div >
+	      <section>
 	        <div id="flash">
 	          <% flash.each do |key, value| %>
 	        <div class="flash <%= key %>"><%= value %></div>
@@ -27,11 +27,8 @@
 	      </section>
 	      	<%= render "shared/header" %>
         	<%= yield %>
-        	<%= render "shared/footer" %> 
+        	<%= render "shared/footer" %>
     	</div>
 	  </body>
-	</center> 
+	</center>
 </html>
-
-
- 

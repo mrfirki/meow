@@ -1,5 +1,6 @@
 .carousel-inner{
-  border: 2px solid black;
+  border: 2px ;
+  border-radius: 25px;
 }
 
 .twitter {
@@ -36,7 +37,7 @@
   padding-right: 50px;
 }
 
-.tumblr_images { 
+.tumblr_images {
                 height: auto;
                 width: auto;
                 max-width: 230px;
