@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+- solve the conflicts in index
+
+- make sure no more head or master word inside
+- git push origin frontend_v3
+- github?open pull request? close pull request

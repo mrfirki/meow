@@ -1,18 +1,19 @@
 <div class="container-fluid">
   <div class="row">
     <div class="gallery col-lg-2 col-md-2 col-sm-2 col-xs-2 col-md-offset-2 col-xs-offset-2">
-      <%= image_tag "Nyan.png", :alt => "cat", :class => "style_image"  %>
+      <%=  image_tag "curioscat.png", :alt => "cat", :class => "style_image"  %>
     </div>
     <div class="gallery-title col-lg-4 col-md-4 col-sm-4 col-xs-4">
-      <h1 class="text-center">Miaou Cat</h1>
+      <%=  image_tag "app.png", :alt => "cat"  %>
+      <h1 class="text-center"></h1>
     </div>
   </div>
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
       <button class="btn btn-default filter-button active" data-filter="all">All</button>
-      <button class="btn btn-default filter-button" data-filter="hdpe">Twitter</button>
-      <button class="btn btn-default filter-button" data-filter="sprinkle">Youtube</button>
-      <button class="btn btn-default filter-button" data-filter="spray">Tumblr</button>
+      <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %>
+      <%=  image_tag "youtube.png", :alt => "youtube", :class => "style_logo"  %>
+      <%=  image_tag "tumblr.png", :alt => "tumblr", :class => "style_logo"  %>
     </div>
     <div class="dropdown col-md-2" >
       <button class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -21,13 +22,18 @@
       </button>
       <ul class="dropdown-menu drop-down-menu-right" aria-labelledby="dropdownMenu1">
         <li><a href="#">Most views</a></li>
-        <li><a href="#">Recommanded</a></li>
+        <li><a href="#">Recommended</a></li>
       </ul>
     </div>
   </div>
 
 </br>
 </br>
+</br>
+</br>
+</br>
+
+
   <!-- begin of carroussel -->
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
@@ -41,7 +47,7 @@
 
         <!-- Carousel items -->
         <div class="carousel-inner twitter">
-          
+
           <div class="item active">
             <div class="row" id="carousel-row">
             <% $twitter_client.search("cat filter:media ", result_type: "popular", lang: "en").take(8).each.with_index do |tweet, index| %>
@@ -52,17 +58,50 @@
             <div class="row" id="carousel-row">
               <% end %>
                 <div class="col-md-4">
-                  <%= image_tag(tweet.user.profile_image_uri) %>
-                  <br>
-                  <%= tweet.user.name %>
-                  <br>
-                  <%= tweet.text %>
-                  <br> 
-                  <br>
+                  <div class="row twitter-box">
+                    <div class="col-md-4 col-xs-4">
+                      <%= image_tag tweet.user.profile_image_uri, class: "twitter-image" %>
+                    </div>
+                    <div class="col-md-6 col-xs-6 text-left">
+                      <p class="twitter-tittle">
+                        <%= tweet.user.name %>
+                      </p>
+                    </div>
+                    <div class="col-md-12 col-xs-12">
+                      <%= tweet.text %>
+                    </div>
+                  </div>
                 </div>
             <% end %>
             </div>
           </div>
+
+          <!-- <div class="item active">
+            <div class="row" id="carousel-row">
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+            </div>
+          </div> -->
+
+         <!--  <div class="item">
+            <div class="row" id="carousel-row">
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+            </div>
+          </div> -->
+
+       <!--  <div class="item">
+          <div class="row" id="carousel-row">
+            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+          </div>
+        </div> -->
 
         </div><!--.carousel-inner-->
         <a data-slide="prev" href="#Carousel_1" class="left carousel-control">‹</a>
@@ -75,6 +114,8 @@
   </br>
   </br>
   </br>
+  </br>
+  </br>
 
     <!-- begin of carroussel -->
     <div class="row">
@@ -82,13 +123,15 @@
         <div id="Carousel_2" class="carousel slide">
 
           <ol class="carousel-indicators">
-              <li data-target="#Carousel_2" data-slide-to="0" class="active"></li>
-              <li data-target="#Carousel_2" data-slide-to="1"></li>
-              <li data-target="#Carousel_2" data-slide-to="2"></li>
+            <li data-target="#Carousel_1" data-slide-to="0" class="active"></li>
+            <li data-target="#Carousel_1" data-slide-to="1"></li>
+            <li data-target="#Carousel_1" data-slide-to="2"></li>
           </ol>
 
           <!-- Carousel items -->
           <div class="carousel-inner youtube">
+            <!-- <div class="item active"> -->
+              <!-- <div class="row" id="carousel-row"> -->
               <% if @search_results %>
                 <% @search_results.each.with_index do |result, index| %>
                   <% case result.id.kind %>
@@ -106,7 +149,30 @@
                   <% end %>
                 <% end %>
               <% end %>
-        
+                <!-- <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div> -->
+              <!-- </div> -->
+            <!-- </div> -->
+
+          <!--   <div class="item">
+              <div class="row" id="carousel-row">
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              </div>
+            </div>
+
+            <div class="item">
+            <div class="row" id="carousel-row">
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+              <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+            </div>
+          </div> -->
 
           </div><!--.carousel-inner-->
           <a data-slide="prev" href="#Carousel_2" class="left carousel-control">‹</a>
@@ -118,8 +184,12 @@
     </br>
     </br>
     </br>
-                              <!-- begin of carroussel -->
-    <div class="row">
+    </br>
+    </br>
+
+
+      <!-- begin of carroussel -->
+      <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div id="Carousel_3" class="carousel slide">
 
@@ -130,7 +200,7 @@
                     <div class="item active">
                       <div class="row" id="carousel-row">
                         <% client = Tumblr::Client.new %>
-                        
+
                         <% x = client.tagged "cat" %>
                         <% y = [] %>
                         <% x[0..8].each do |item| %>
@@ -145,12 +215,12 @@
                     </div>
 
                     <div class="item">
-                      <div class="row" id="carousel-row">
-                            <% end %>  
+                          <div class="row" id="carousel-row">
+                            <% end %>
                             <div class="col-md-4">
-                            <% if post.keys.include?("photos") %> 
+                            <% if post.keys.include?("photos") %>
                               <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
-                            <% end %> 
+                            <% end %>
 
                             <div target>
                             <u><%= post["blog_name"] %></u>
@@ -160,28 +230,86 @@
                             </div>
 
                             </div>
-                        <% end %>         
+                        <% end %>
                       </div>
                     </div>
+
             </div><!--.carousel-inner-->
             <a data-slide="prev" href="#Carousel_3" class="left carousel-control">‹</a>
             <a data-slide="next" href="#Carousel_3" class="right carousel-control">›</a>
-          </div><!--.Carousel-->
-        </div>
-    </div> 
-<br>
-    <div class="row">
+        </div><!--.Carousel-->
+      </div>
+
+      <div class="row">
          <div class="col-md-10 col-md-offset-1">
                 <ol class="carousel-indicators">
                   <li data-target="#Carousel_3" data-slide-to="0" class="active"></li>
                   <li data-target="#Carousel_3" data-slide-to="1"></li>
                   <li data-target="#Carousel_3" data-slide-to="2"></li>
                </ol>
-         </div>   
-    </div>
-
-
+         </div>
+      </div>
+</div>
         <!-- end of carroussel -->
   </br>
   </br>
   </br>
+<!-- //FOOTER  -->
+<div class="container">
+    <section style="height:80px;"></section>
+
+    <footer class="footer-bs">
+        <div class="row">
+          <div class="col-md-3 footer-brand animated fadeInLeft">
+              <h2>Logo</h2>
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>© 2014 BS3 UI Kit, All rights reserved</p>
+            </div>
+          <div class="col-md-4 footer-nav animated fadeInUp">
+              <h4>Menu —</h4>
+              <div class="col-md-6">
+                    <ul class="pages">
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Nature</a></li>
+                        <li><a href="#">Explores</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Advice</a></li>
+                    </ul>
+                </div>
+              <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+          <div class="col-md-2 footer-social animated fadeInDown">
+              <h4>Follow Us</h4>
+              <ul>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Youtube</a></li>
+                  <li><a href="#">Tumblr</a></li>
+                </ul>
+            </div>
+          <div class="col-md-3 footer-ns animated fadeInRight">
+              <h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                <p>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                      </span>
+                    </div><!-- /input-group -->
+                 </p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Footer -->
+
+
+
+</div>
