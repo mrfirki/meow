@@ -28,6 +28,8 @@ gem 'trollop'
 gem 'yt', '~> 0.28.0'
 #add figaro
 gem 'figaro'
+#add faraday
+gem 'faraday_middleware', '~> 0.9.2'
 
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
