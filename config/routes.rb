@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'cat#index'
+  get 'cat/index'
   get 'twitter/index'
   get 'tumblr/index'
+
+	root 'welcome#index'
 
 	resources :passwords, controller: "clearance/passwords", only: [:create, :new]
 	resource :session, controller: "clearance/sessions", only: [:create]
@@ -19,5 +21,5 @@ Rails.application.routes.draw do
 	get "/sign_up" => "clearance/users#new", as: "sign_up"
 	#*** end of default routes of Clearance
 
-	resources :users, controller: "users", only: [:show, :edit]
+	resources :users, controller: "users", only: :show
 end
