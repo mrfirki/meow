@@ -200,7 +200,7 @@
                     <div class="item active">
                       <div class="row" id="carousel-row">
                         <% client = Tumblr::Client.new %>
-                        
+
                         <% x = client.tagged "cat" %>
                         <% y = [] %>
                         <% x[0..8].each do |item| %>
@@ -216,11 +216,11 @@
 
                     <div class="item">
                           <div class="row" id="carousel-row">
-                            <% end %>  
+                            <% end %>
                             <div class="col-md-4">
-                            <% if post.keys.include?("photos") %> 
+                            <% if post.keys.include?("photos") %>
                               <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
-                            <% end %> 
+                            <% end %>
 
                             <div target>
                             <u><%= post["blog_name"] %></u>
@@ -230,7 +230,7 @@
                             </div>
 
                             </div>
-                        <% end %>         
+                        <% end %>
                       </div>
                     </div>
 
@@ -247,15 +247,14 @@
                   <li data-target="#Carousel_3" data-slide-to="1"></li>
                   <li data-target="#Carousel_3" data-slide-to="2"></li>
                </ol>
-         </div>   
+         </div>
       </div>
-<<<<<<< HEAD
+
         <!-- end of carroussel -->
 </br>
 </br>
 </br>
-=======
->>>>>>> master
+
 
 </div>
         <!-- end of carroussel -->
@@ -263,7 +262,7 @@
   </br>
   </br>
 
-<<<<<<< HEAD
+
 <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
@@ -308,12 +307,11 @@
                         Copyright &copy; Your Website 2016
                     </div>
                 </div>
-=======
+
 <!-- //FOOTER  -->
 <div class="container">
     <section style="height:80px;"></section>
 
-    <!----------- Footer ------------>
     <footer class="footer-bs">
         <div class="row">
           <div class="col-md-3 footer-brand animated fadeInLeft">
@@ -360,7 +358,7 @@
                       </span>
                     </div><!-- /input-group -->
                  </p>
->>>>>>> master
+
             </div>
         </div>
     </footer>
