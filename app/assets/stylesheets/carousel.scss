@@ -10,7 +10,7 @@
   background-color: #cc181e;
 }
 
-.tumbl {
+.tumblr {
   background-color:  #35465c;
 }
 
@@ -54,3 +54,6 @@
                 max-width: 230px;
                 max-height: 210px;
                          }
+body .carousel-indicators .active {
+  background-color: green;
+}

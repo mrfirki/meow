@@ -21,7 +21,7 @@
       </button>
       <ul class="dropdown-menu drop-down-menu-right" aria-labelledby="dropdownMenu1">
         <li><a href="#">Most views</a></li>
-        <li><a href="#">Recommanded</a></li>
+        <li><a href="#">Recommended</a></li>
       </ul>
     </div>
   </div>
@@ -109,9 +109,9 @@
         <div id="Carousel_2" class="carousel slide">
 
           <ol class="carousel-indicators">
-              <li data-target="#Carousel_2" data-slide-to="0" class="active"></li>
-              <li data-target="#Carousel_2" data-slide-to="1"></li>
-              <li data-target="#Carousel_2" data-slide-to="2"></li>
+            <li data-target="#Carousel_1" data-slide-to="0" class="active"></li>
+            <li data-target="#Carousel_1" data-slide-to="1"></li>
+            <li data-target="#Carousel_1" data-slide-to="2"></li>
           </ol>
 
           <!-- Carousel items -->
@@ -159,41 +159,63 @@
         <div class="col-md-10 col-md-offset-1">
           <div id="Carousel_3" class="carousel slide">
 
-            <ol class="carousel-indicators">
-                <li data-target="#Carousel_3" data-slide-to="0" class="active"></li>
-                <li data-target="#Carousel_3" data-slide-to="1"></li>
-                <li data-target="#Carousel_3" data-slide-to="2"></li>
-            </ol>
+
             <!-- Carousel items -->
-            <div class="carousel-inner tumbl">
-              <div class="item active">
-                <div class="row" id="carousel-row">
-                  <% client = Tumblr::Client.new %>
-                  <% x = client.tagged "cat" %>
-                  <% x[0..9].each.with_index do |post, index| %>
-                  <% if (index + 1) > 3 && (index % 3) == 0 %>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row" id="carousel-row">
-                  <% end %>  
-                  <div class="col-md-4">
-                  <% if post.keys.include?("photos") %> 
-                    <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
-                  <% end %>
-                  <b><%= post["blog_name"] %></b>
-                  <% if /[^\x00-\x7F]+/.match(post["caption"]) == nil %>
-                    <%= raw post['caption'] %>
-                  <% end %>   
-                </div>
-                  <% end %>         
-              </div>
-             </div>
+            <div class="carousel-inner tumblr">
+
+                    <div class="item active">
+                      <div class="row" id="carousel-row">
+                        <% client = Tumblr::Client.new %>
+                        
+                        <% x = client.tagged "cat" %>
+                        <% y = [] %>
+                        <% x[0..8].each do |item| %>
+                          <% if item["photos"] != nil %>
+                            <% y << item %>
+                          <% end %>
+                        <% end %>
+
+                        <% y[0..8].each.with_index do |post, index| %>
+                            <% if (index + 1) > 3 && (index % 3) == 0 %>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                          <div class="row" id="carousel-row">
+                            <% end %>  
+                            <div class="col-md-4">
+                            <% if post.keys.include?("photos") %> 
+                              <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
+                            <% end %> 
+
+                            <div target>
+                            <u><%= post["blog_name"] %></u>
+                              <% if /[^\x00-\x7F]+/.match(post["caption"]) == nil %>
+                                <%= raw post['caption'] %>
+                              <% end %>
+                            </div>
+
+                            </div>
+                        <% end %>         
+                      </div>
+                    </div>
+
             </div><!--.carousel-inner-->
             <a data-slide="prev" href="#Carousel_3" class="left carousel-control">‹</a>
             <a data-slide="next" href="#Carousel_3" class="right carousel-control">›</a>
         </div><!--.Carousel-->
       </div>
+
+      <div class="row">
+         <div class="col-md-10 col-md-offset-1">
+                <ol class="carousel-indicators">
+                  <li data-target="#Carousel_3" data-slide-to="0" class="active"></li>
+                  <li data-target="#Carousel_3" data-slide-to="1"></li>
+                  <li data-target="#Carousel_3" data-slide-to="2"></li>
+               </ol>
+         </div>   
+      </div>
+
 </div>
         <!-- end of carroussel -->
   </br>
