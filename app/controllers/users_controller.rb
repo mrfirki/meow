@@ -1,11 +1,7 @@
 class UsersController < Clearance::UsersController
 
-	def index
-	  @users = User.all  
-	end  
-
 	def show
-	  @user = User.find(params[:id])
+	  @users = User.all
 	 end
 
 	def edit
@@ -21,7 +17,7 @@ class UsersController < Clearance::UsersController
 			flash[:danger] = "update fail!!"
 			render 	:edit
 		end	
-  	end
+  end
 
 	def delete
 	 	@user = User.find_by(params[:id])
@@ -32,6 +28,6 @@ class UsersController < Clearance::UsersController
 	private
 
 	  def user_params
-	    params.require(:user).permit(:name, :email, :password, :gender, :country)
+	    params.require(:user).permit(:email, :password, :gender, :country)
 	  end
 end

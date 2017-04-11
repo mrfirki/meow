@@ -46,10 +46,10 @@
             <div class="row" id="carousel-row">
             <% $twitter_client.search("cat filter:media ", result_type: "popular", lang: "en").take(8).each.with_index do |tweet, index| %>
               <% if (index + 1) > 3 && (index % 3) == 0 %>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="row" id="carousel-row">
+            </div>
+          </div>
+          <div class="item">
+            <div class="row" id="carousel-row">
               <% end %>
                 <div class="col-md-4">
                   <%= image_tag(tweet.user.profile_image_uri) %>
@@ -61,8 +61,8 @@
                   <br>
                 </div>
             <% end %>
-              </div>
             </div>
+          </div>
 
           <!-- <div class="item active">
             <div class="row" id="carousel-row">
@@ -116,24 +116,40 @@
 
           <!-- Carousel items -->
           <div class="carousel-inner youtube">
+            <!-- <div class="item active"> -->
+              <!-- <div class="row" id="carousel-row"> -->
+              <% if @search_results %>
+                <% @search_results.each.with_index do |result, index| %>
+                  <% case result.id.kind %>
+                  <% when 'youtube#video' %>
+                   <div class="item <%= "active" if index == 0 %>">
+                      <div class="row" id="carousel-row">
+                    <h4><%= result.snippet.title %></h4>
+                    <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                      </div>
+                    </div>
+                  <% when 'youtube#channel' %>
+                    <p><%= result.snippet.title %> <%= result.id.channelId %></p>
+                  <% when 'youtube#playlist' %>
+                    <p><%= result.snippet.title %> <%= result.id.playlistId %></p>
+                  <% end %>
+                <% end %>
+              <% end %>
+                <!-- <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div> -->
+              <!-- </div> -->
+            <!-- </div> -->
 
-            <div class="item active">
+          <!--   <div class="item">
               <div class="row" id="carousel-row">
                 <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
                 <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
                 <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
                 <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-              </div><!--.row-->
-            </div><!--.item-->
-
-            <div class="item">
-              <div class="row" id="carousel-row">
-                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-              </div><!--.row-->
-            </div><!--.item-->
+              </div>
+            </div>
 
             <div class="item">
             <div class="row" id="carousel-row">
@@ -141,12 +157,12 @@
               <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
               <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
               <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-            </div><!--.row-->
-          </div><!--.item-->
+            </div>
+          </div> -->
 
           </div><!--.carousel-inner-->
           <a data-slide="prev" href="#Carousel_2" class="left carousel-control">‹</a>
-          <a data-slide="next" href="#Carousel_2" class="right carousel-control">›</a>
+          <a data-slide="next" href="#Carousel_2" class="right carousel-control ">›</a>
         </div><!--.Carousel-->
       </div>
     </div>
@@ -163,6 +179,7 @@
             <!-- Carousel items -->
             <div class="carousel-inner tumblr">
 
+<<<<<<< HEAD
                     <div class="item active">
                       <div class="row" id="carousel-row">
                         <% client = Tumblr::Client.new %>
@@ -174,6 +191,16 @@
                             <% y << item %>
                           <% end %>
                         <% end %>
+=======
+              <div class="item active">
+                <div class="row" id="carousel-row">              
+                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                </div><!--.row-->
+              </div><!--.item-->
+>>>>>>> master
 
                         <% y[0..8].each.with_index do |post, index| %>
                             <% if (index + 1) > 3 && (index % 3) == 0 %>

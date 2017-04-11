@@ -1,4 +1,13 @@
 <center>
 	<h1>Users#show</h1>
 	<p>Find me in app/views/users/show.html.erb</p>
+
+
+	<% @users.each do |u| %>
+	<%= u.email %>
+	<% u.password %>
+	<% end %>
+
+	<%= link_to "edit", edit_user_path %>
 </center>
+
