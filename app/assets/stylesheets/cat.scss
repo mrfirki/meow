@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .style_image
 {
   height: 150px;
@@ -147,10 +149,20 @@ footer .footer-below {
 }
 
 div[target] {
-                 color: #ced4dd;   
-                 position: bottom;
+                  color: #ced4dd;   
+
+                    width:230px; 
+                    height:250px; 
+                    overflow:hidden;
 }
+
+
                       
 .carousel-indicators {
                 color: black;
+}
+
+.tumblr_images{
+    width: 200px;
+    height: 200px;
 }
