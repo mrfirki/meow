@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
 
 	def get_service
     	client = Google::APIClient.new(
-	    :key => ENV['YOUTUBE_DEVELOPER_KEY'],
+	    :key => ENV['_DEVELOPER_KEY'],
 		    :authorization => nil,
 		    :application_name => $PROGRAM_NAME,
 		    :application_version => '1.0.0'
