@@ -1,3 +1,17 @@
 // Place all the styles related to the Twitter controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.twitter-box {
+  background-color: white;
+  width: 95%;
+  padding: 5px;
+}
+
+.twitter-image {
+  border-radius: 50px;
+}
+
+.twitter-tittle {
+  font-weight: bold;
+}
