@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 </br>
 </br>
 <div class="container-fluid">
@@ -10,13 +11,24 @@
     <h1 class="text-center"></h1>
   </div>
 </div>
+=======
+<!-- <div class="jumbotron" id="welcome-jumbo">
+   <h1>MEOW CAT</h1>
+  <p>Take a break, take a Meow Time<br>
+
+  </p>
+</div> -->
+
+<!-- <%= link_to "Sign out", sign_out_path, method: :delete %> -->
+
+<%= link_to(image_tag("/assets/mad.png"), sign_out_path, method: :delete) %>
+
+
+>>>>>>> master
 </br>
 </br>
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
-      <a href="#logo">
-      <button class="btn btn-default filter-button active" data-filter="all">All</button>
-      </a>
       <a href="#Carousel_1">
         <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %>
       </a>
@@ -28,7 +40,6 @@
       </a>
     </div>
   </div>
-
 </br>
 </br>
 </br>
@@ -109,19 +120,22 @@
           <div class="carousel-inner youtube">
             <!-- <div class="item active"> -->
               <!-- <div class="row" id="carousel-row"> -->
-              <% if @search_results %>
+               <% if @search_results %>
                 <% @search_results.each.with_index do |result, index| %>
                   <% case result.id.kind %>
                   <% when 'youtube#video' %>
                    <div class="item <%= "active" if index == 0 %>">
                       <div class="row" id="carousel-row">
-                    <h4><%= result.snippet.title %></h4>
-                    <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                        <div class="centering">
+                        <div class="col-md-8 col-md-offset-2">
+                          <h4><%= result.snippet.title %></h4>
+                          <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
                       </div>
                     </div>
                   <% when 'youtube#channel' %>
                     <p><%= result.snippet.title %> <%= result.id.channelId %></p>
-                  <% when 'youtube#playlist' %>
+                  <% when 'youtube#playlist' %>                                                                     
                     <p><%= result.snippet.title %> <%= result.id.playlistId %></p>
                   <% end %>
                 <% end %>
@@ -173,14 +187,18 @@
                             <% if post.keys.include?("photos") %>
                               <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
                             <% end %>
-
+                            <div class="row text-center" id="carousel-row">
+                            
                             <div target>
                             <u><%= post["blog_name"] %></u>
+                              <br>
+                              <br>
+                      
                               <% if /[^\x00-\x7F]+/.match(post["caption"]) == nil %>
                                 <%= raw post['caption'] %>
                               <% end %>
                             </div>
-
+                            </div>
                             </div>
                         <% end %>
                       </div>
@@ -206,4 +224,6 @@
   </br>
   </br>
   </br>
+
 </div>
+
