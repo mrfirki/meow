@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-image: url(/assets/cat_wall.jpeg)
-}
 
 .style_image
 {
@@ -150,6 +147,10 @@ footer .footer-below {
   color: black;
 }
 
+
+
+
+                      
 div[target] {
                  color: #ced4dd;
                  position: bottom;
@@ -159,6 +160,10 @@ div[target] {
                 color: black;
 }
 
+.tumblr_images{
+    width: 200px;
+    height: 200px;
+}
 #welcome-jumbo{
   // background-image: url(/assets/djcat.jpeg);
   background: url(/assets/djcat.jpeg) no-repeat center center fixed;

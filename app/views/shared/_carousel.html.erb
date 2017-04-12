@@ -55,7 +55,8 @@
           <div class="item">
             <div class="row" id="carousel-row">
               <% end %>
-                <div class="col-md-4">
+
+                <div class="col-md-4 robert">
                 </br>
               </br>
                   <div class="row twitter-box">
@@ -111,6 +112,7 @@
                   <% when 'youtube#video' %>
                    <div class="item <%= "active" if index == 0 %>">
                       <div class="row" id="carousel-row">
+                        <div class="centering">
                         <div class="col-md-8 col-md-offset-2">
                           <h4><%= result.snippet.title %></h4>
                           <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
@@ -119,7 +121,7 @@
                     </div>
                   <% when 'youtube#channel' %>
                     <p><%= result.snippet.title %> <%= result.id.channelId %></p>
-                  <% when 'youtube#playlist' %>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                  <% when 'youtube#playlist' %>                                                                     
                     <p><%= result.snippet.title %> <%= result.id.playlistId %></p>
                   <% end %>
                 <% end %>
@@ -171,14 +173,18 @@
                             <% if post.keys.include?("photos") %>
                               <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
                             <% end %>
-
+                            <div class="row text-center" id="carousel-row">
+                            
                             <div target>
                             <u><%= post["blog_name"] %></u>
+                              <br>
+                              <br>
+                      
                               <% if /[^\x00-\x7F]+/.match(post["caption"]) == nil %>
                                 <%= raw post['caption'] %>
                               <% end %>
                             </div>
-
+                            </div>
                             </div>
                         <% end %>
                       </div>
@@ -204,5 +210,6 @@
   </br>
   </br>
   </br>
+
 </div>
-Q
+
