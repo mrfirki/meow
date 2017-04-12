@@ -16,11 +16,17 @@
 <%= link_to(image_tag("/assets/mad.png"), sign_out_path, method: :delete) %>
 
 
+<div class="row">
+  <div class="col-md-1 col-md-offset-10" style="padding: 10px;">
+  <%= link_to(image_tag("/assets/mad.png", height: '70', width: '70'), sign_out_path, method: :delete, id: "sign-out") %>
+  </div>
+</div>
+
 
 </br>
 </br>
   <div class="row">
-    <div class="col-md-8 col-md-offset-2 text-center">
+    <div class="col-md-2 col-md-offset-5">
       <a href="#Carousel_1">
         <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %>
       </a>
@@ -38,6 +44,12 @@
 </br>
 </br>
 
+<!-- text box for carousal -->
+<div class="row">
+  <div class="col-md-2 col-md-offset-2">
+    <h2>#twitter</h2>
+  </div>
+</div>  
 
   <!-- begin of carroussel -->
   <div class="row">
@@ -97,6 +109,13 @@
   </br>
   </br>
 
+<!-- text box for carousal -->
+<div class="row">
+  <div class="col-md-2 col-md-offset-2">
+    <h2>#youtube</h2>
+  </div>
+</div>  
+
     <!-- begin of carroussel -->
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
@@ -125,10 +144,6 @@
                         </div>
                       </div>
                     </div>
-                  <% when 'youtube#channel' %>
-                    <p><%= result.snippet.title %> <%= result.id.channelId %></p>
-                  <% when 'youtube#playlist' %>                                                                     
-                    <p><%= result.snippet.title %> <%= result.id.playlistId %></p>
                   <% end %>
                 <% end %>
               <% end %>
@@ -141,10 +156,14 @@
       <!-- end of carroussel -->
     </br>
     </br>
-    </br>
-    </br>
-    </br>
 
+
+<!-- text box for carousal -->
+<div class="row">
+  <div class="col-md-2 col-md-offset-2">
+    <h2>#tumblr</h2>
+  </div>
+</div>  
 
       <!-- begin of carroussel -->
       <div class="row">

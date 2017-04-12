@@ -165,15 +165,12 @@ div[target] {
     height: 200px;
 }
 #welcome-jumbo{
-  // background-image: url(/assets/djcat.jpeg);
   background: url(/assets/djcat.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: 0.6;
   background-size: cover;
-  // opacity: 0.6;
-	// background-size:cover;
-	// height: 100%;
+
 }
 
 .navbar {
