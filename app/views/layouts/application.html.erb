@@ -17,7 +17,7 @@
 
   </head>
 
-	<body class="body">
+	<body>
 
 	    <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	        <div class="container">
@@ -43,21 +43,13 @@
 	    </nav> -->
 
 
-	      <section> 
-	   	<div >
-	      <section>
-
-	        <div id="flash">
-	          <% flash.each do |key, value| %>
-	        <div class="flash <%= key %>"><%= value %></div>
-	          <% end %>
-	        </div>
-	      </section>
-	      	<%= render "shared/header" %>
+	    <div id="flash">
+	      <% flash.each do |key, value| %>
+	    <div class="flash <%= key %>"><%= value %></div>
+	      <% end %>
+	    </div>
+	      	<%#= render "shared/header" %>
         	<%= yield %>
 	  </body>
-        	<%= render "shared/footer" %>
-    	</div>
-	  </body>
-	</center>
+        	<%#= render "shared/footer" %>
 </html>
