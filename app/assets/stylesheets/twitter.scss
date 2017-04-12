@@ -5,9 +5,7 @@
 .twitter-box {
   background-color: white;
   width: 95%;
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-  color: #000;
+	font: Helvetica, Arial, sans-serif;  color: #000;
   border-top-color: #eee;
   border-bottom-color: #bbb;
   border-radius: 5px;
@@ -15,14 +13,22 @@
   padding: 16px;
 }
 
-.twitter-name {
+.twitter-box p {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+
+.twitter-logo {
 	padding-left: 0px;
 }
 
 .twitter-image {
-  border-radius: 50px;
+  border-radius: 15px;
 }
 
-.twitter-tittle {
+.twitter-title {
   font-weight: bold;
+  font-size: 18px;
 }
+
