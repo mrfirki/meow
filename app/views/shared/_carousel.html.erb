@@ -109,19 +109,21 @@
           <div class="carousel-inner youtube">
             <!-- <div class="item active"> -->
               <!-- <div class="row" id="carousel-row"> -->
-              <% if @search_results %>
+               <% if @search_results %>
                 <% @search_results.each.with_index do |result, index| %>
                   <% case result.id.kind %>
                   <% when 'youtube#video' %>
                    <div class="item <%= "active" if index == 0 %>">
                       <div class="row" id="carousel-row">
-                    <h4><%= result.snippet.title %></h4>
-                    <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                        <div class="col-md-8 col-md-offset-2">
+                          <h4><%= result.snippet.title %></h4>
+                          <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
                       </div>
                     </div>
                   <% when 'youtube#channel' %>
                     <p><%= result.snippet.title %> <%= result.id.channelId %></p>
-                  <% when 'youtube#playlist' %>
+                  <% when 'youtube#playlist' %>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                     <p><%= result.snippet.title %> <%= result.id.playlistId %></p>
                   <% end %>
                 <% end %>
@@ -207,3 +209,4 @@
   </br>
   </br>
 </div>
+Q
