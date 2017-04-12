@@ -4,7 +4,7 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-3">
-      <h1 class="header-style">Meow Time</h1>
+      <h1 class="header-style" id="font">Meow Time</h1>
     </div>
   </div>
   <br>
@@ -15,7 +15,7 @@
     <div class="col-md-2 border register-form">
 
       <div id="clearance" class="sign-in special-fonts">
-        <h2><%= ("Log In") %></h2>
+        <h2 id="font"><%= ("Log In") %></h2>
         <%= render partial: '/sessions/form' %>
       </div>
     </div>
@@ -32,7 +32,7 @@
     </div>
     <div class="col-md-2 border register-form">
       <div id="clearance" class="sign-up special-fonts">
-        <h2><%= ("Register") %></h2>
+        <h3 id="font"><%= ("Register") %></h3>
         
 
           <%= form_for @user, html: { class: "form-horizontal special-fonts" }  do |form| %>

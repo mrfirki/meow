@@ -120,8 +120,8 @@
                    <div class="item <%= "active" if index == 0 %>">
                       <div class="row" id="carousel-row">
                         <div class="col-md-8 col-md-offset-2">
-                          <h4><%= result.snippet.title %></h4>
-                          <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                          <h3 id="font" style="color: white;"><%= result.snippet.title %></h3>
+                          <iframe width="640" height="350" frameborder="5" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
                         </div>
                     </div>
                   </div>
