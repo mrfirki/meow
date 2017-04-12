@@ -2,11 +2,17 @@ require 'google/api_client'
 require 'trollop'
 
 class WelcomeController < ApplicationController
+	before_action :check_if_logged_in?, only: :index
+
  	def index
 		@search_results = search_video
 	end
 
 	private
+
+	def check_if_logged_in?
+		redirect_to sign_up_path unless signed_in?
+	end
 
 	def get_service
     	client = Google::APIClient.new(
