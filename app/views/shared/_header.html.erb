@@ -1,29 +1,24 @@
 <div>
-	    <nav class="navbar navbar-default" role="navigation">
-	        <div class="container-fluid">
-	           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	                <ul class="nav navbar-nav">
-	                    <li>
-	                        <%= link_to "Home", root_path %>
-	                    </li>
-	                    <% if signed_in? %>
-	                    <li>
-	                        <%= link_to "Profile", user_path(current_user) %>
-	                    </li>
-	                </ul>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <%= link_to "Home", root_path %>
+                </li>
+                <% if signed_in? %>
+                <li>
+                    <%= link_to "Profile", user_path(current_user) %>
+                </li>
+            </ul>
 
-	                <ul class="nav navbar-nav navbar-right">
-	                  <li >
-	                      <%= link_to "Sign out", sign_out_path, method: :delete %>
-	                  </li>
-	                </ul>
-	                    <% end %>
-	            </div>
-	        </div>
-	    </nav>
-  	<div>
-
-
-
-
-	
+            <ul class="nav navbar-nav navbar-right">
+              <li >
+                  <%= link_to "Sign out", sign_out_path, method: :delete %>
+              </li>
+            </ul>
+                <% end %>
+        </div>
+    </div>
+  </nav>
+</div>

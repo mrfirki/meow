@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background-image: url(/assets/cat_wall.jpeg)
+}
+
 .style_image
 {
   height: 150px;
@@ -147,10 +151,34 @@ footer .footer-below {
 }
 
 div[target] {
-                 color: #ced4dd;   
+                 color: #ced4dd;
                  position: bottom;
 }
-                      
+
 .carousel-indicators {
                 color: black;
+}
+
+#welcome-jumbo{
+  // background-image: url(/assets/djcat.jpeg);
+  background: url(/assets/djcat.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: 0.6;
+  background-size: cover;
+  // opacity: 0.6;
+	// background-size:cover;
+	// height: 100%;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+h1 {
+font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 20px;
+color: white;
 }
