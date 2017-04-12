@@ -27,14 +27,11 @@
   <br>
   <br>
   
-  <div class="row">
-    <div class="col-md-1">
-    </div>
+  <div class="row" style="padding-bottom: 100px;">
+    <div class="col-md-1"></div>
     <div class="col-md-2 border register-form">
       <div id="clearance" class="sign-up special-fonts">
         <h3 id="font"><%= ("Register") %></h3>
-        
-
           <%= form_for @user, html: { class: "form-horizontal special-fonts" }  do |form| %>
             <%= render partial: '/users/form', object: form %>
             <div class="form-group">
@@ -46,10 +43,7 @@
       </div>
     </div>
   </div>
-
-  
-
-
 </div>
+<div class="row"></div>
 
 
