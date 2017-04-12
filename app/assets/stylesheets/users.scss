@@ -9,15 +9,48 @@
 	border-radius: 10px;
 }
 
-.button-right
+.header-style 
 {
-	margin-right: 15px;
+		color: white;
+		font-family: 'Raleway', sans-serif;
+		font-weight: bold;
+		font-size: 45px;
 }
 
-a {
-	color: gray;
+.register 
+{
+	background: image-url('unicorncat.jpg');
+	background-size:cover;
+	height: 100%;
 }
 
-a:hover {
-	color: hotpink;
+body, html 
+{
+	height: 100%;
+}
+
+body 
+{
+		font-family: 'Roboto', sans-serif;
+}
+
+.background-tint
+{
+	background-color: rgba(152,148,148, 0.8);
+  background-blend-mode: multiply;
+}
+
+h2 
+{
+	text-align: center;
+}
+
+.register-form
+{
+	background: rgba(135,224,251, 0.8);
+}
+
+.special-fonts
+{
+	color: white;
 }

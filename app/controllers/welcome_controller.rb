@@ -4,7 +4,7 @@ require 'trollop'
 class WelcomeController < ApplicationController
  	def index
 		@search_results = search_video
-	end	
+	end
 
 	private
 

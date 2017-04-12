@@ -13,12 +13,40 @@
       <!-- Load the Hosted Fields component. -->
     <script src="https://js.braintreegateway.com/web/3.11.1/js/hosted-fields.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto:300i,400" rel="stylesheet">
+
   </head>
 
-<center>
 	<body class="body">
-	   	<div style="padding-top: 100px;">
+
+	    <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav">
+	                    <li>
+	                        <%= link_to "Home", root_path %>
+	                    </li>
+	                    <% if signed_in? %>
+	                    <li>
+	                        <%= link_to "Profile", user_path(current_user) %>
+	                    </li>
+	                </ul>
+
+	                <ul class="nav navbar-nav navbar-right">
+	                  <li >
+	                      <%= link_to "Sign out", sign_out_path, method: :delete %>
+	                  </li>
+	                </ul>
+	                    <% end %>  
+	            </div>            
+	        </div>        
+	    </nav> -->
+
+
 	      <section> 
+	   	<div >
+	      <section>
+
 	        <div id="flash">
 	          <% flash.each do |key, value| %>
 	        <div class="flash <%= key %>"><%= value %></div>
@@ -27,11 +55,9 @@
 	      </section>
 	      	<%= render "shared/header" %>
         	<%= yield %>
-        	<%= render "shared/footer" %> 
+	  </body>
+        	<%= render "shared/footer" %>
     	</div>
 	  </body>
-	</center> 
+	</center>
 </html>
-
-
- 

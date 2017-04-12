@@ -1,29 +1,31 @@
+</br>
+</br>
 <div class="container-fluid">
-  <div class="row">
+  <div id="logo" class="row">
     <div class="gallery col-lg-2 col-md-2 col-sm-2 col-xs-2 col-md-offset-2 col-xs-offset-2">
-      <%=  image_tag "curioscat.png", :alt => "cat", :class => "style_image"  %>
+      <%=  image_tag "cat.png", :alt => "cat1", :class => "style_image"  %>
     </div>
     <div class="gallery-title col-lg-4 col-md-4 col-sm-4 col-xs-4">
       <%=  image_tag "app.png", :alt => "cat"  %>
       <h1 class="text-center"></h1>
     </div>
   </div>
+</br>
+</br>
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
+      <a href="#logo">
       <button class="btn btn-default filter-button active" data-filter="all">All</button>
-      <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %>
-      <%=  image_tag "youtube.png", :alt => "youtube", :class => "style_logo"  %>
-      <%=  image_tag "tumblr.png", :alt => "tumblr", :class => "style_logo"  %>
-    </div>
-    <div class="dropdown col-md-2" >
-      <button class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Dropdown
-      <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu drop-down-menu-right" aria-labelledby="dropdownMenu1">
-        <li><a href="#">Most views</a></li>
-        <li><a href="#">Recommended</a></li>
-      </ul>
+      </a>
+      <a href="#Carousel_1">
+        <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %>
+      </a>
+      <a href="#Carousel_2">
+        <%=  image_tag "youtube.png", :alt => "youtube", :class => "style_logo"%>
+      </a>
+      <a href="#Carousel_3">
+        <%=  image_tag "tumblr.png", :alt => "tumblr", :class => "style_logo"  %>
+      </a>
     </div>
   </div>
 
@@ -58,6 +60,8 @@
             <div class="row" id="carousel-row">
               <% end %>
                 <div class="col-md-4">
+                </br>
+              </br>
                   <div class="row twitter-box">
                     <div class="col-md-4 col-xs-4">
                       <%= image_tag tweet.user.profile_image_uri, class: "twitter-image" %>
