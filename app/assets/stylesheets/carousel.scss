@@ -1,5 +1,6 @@
 .carousel-inner{
-  border: 2px solid black;
+  border: 2px ;
+  border-radius: 25px;
 }
 
 .twitter {
@@ -10,40 +11,62 @@
   background-color: #cc181e;
 }
 
-.tumbl {
+.tumblr {
   background-color:  #35465c;
 }
 
 .carousel-control {
-    position: absolute;
-    top: 40%;
-    left: 15px;
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    font-size: 60px;
-    font-weight: 100;
-    line-height: 30px;
-    color: #ffffff;
-    text-align: center;
-    background: #222222;
-    border: 3px solid #ffffff;
-    -webkit-border-radius: 23px;
-    -moz-border-radius: 23px;
-    border-radius: 23px;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+  margin-top: 90px;
+  height: 40px;
+  width: 40px !important;
+  border-radius: 23px;
+  border: 4px solid white;
+  background-color: black;
 }
 
 #carousel-row {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-right: 0px;
   margin-left: 0px;
-  margin-bottom:40px;
+  margin-bottom: 170px;
   width: 100%;
 }
 
 .slide {
   padding-left: 60px;
   padding-right: 50px;
+}
+
+.tumblr_images {
+                height: auto;
+                width: auto;
+                max-width: 230px;
+                max-height: 210px;
+                         }
+body .carousel-indicators .active {
+  background-color: green;
+}
+
+.tumblr_images { 
+                height: auto;
+                width: auto;
+                max-width: 230px;
+                max-height: 210px;
+               padding:1px;
+               border:3px solid #5674a5;
+               background-color: #5674a5;
+               border-radius: 10px;
+
+                         }
+body .carousel-indicators {
+  color: auto;
+  bottom: -35px;
+
+  .active {
+    background-color: gray;
+  }
+
+  li {
+    border: 1px solid black;  
+  }
 }
