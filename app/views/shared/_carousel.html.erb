@@ -137,13 +137,12 @@
                   <% when 'youtube#video' %>
                    <div class="item <%= "active" if index == 0 %>">
                       <div class="row" id="carousel-row">
-                        <div class="centering">
                         <div class="col-md-8 col-md-offset-2">
                           <h4><%= result.snippet.title %></h4>
                           <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
                         </div>
-                      </div>
                     </div>
+                  </div>
                   <% end %>
                 <% end %>
               <% end %>
