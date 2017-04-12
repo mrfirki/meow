@@ -5,6 +5,18 @@
 .twitter-box {
   background-color: white;
   width: 95%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+  color: #000;
+  border-top-color: #eee;
+  border-bottom-color: #bbb;
+  border-radius: 5px;
+  border: #ddd 1px solid;
+  padding: 16px;
+}
+
+.twitter-name {
+	padding-left: 0px;
 }
 
 .twitter-image {
