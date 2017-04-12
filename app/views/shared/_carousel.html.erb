@@ -1,21 +1,3 @@
-
-</br>
-</br>
-<div class="container-fluid">
-  <div id="logo" class="row">
-    <div class="gallery col-lg-2 col-md-2 col-sm-2 col-xs-2 col-md-offset-2 col-xs-offset-2">
-      <%=  image_tag "cat.png", :alt => "cat1", :class => "style_image"  %>
-    </div>
-  <div class="gallery-title col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <%=  image_tag "app.png", :alt => "cat"  %>
-    <h1 class="text-center"></h1>
-  </div>
-</div>
-
-
-<%= link_to(image_tag("/assets/mad.png"), sign_out_path, method: :delete) %>
-
-
 <div class="row">
   <div class="col-md-1 col-md-offset-10" style="padding: 10px;">
   <%= link_to(image_tag("/assets/mad.png", height: '70', width: '70'), sign_out_path, method: :delete, id: "sign-out") %>
