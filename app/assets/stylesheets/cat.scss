@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
 .style_image
 {
   height: 150px;
@@ -148,6 +147,10 @@ footer .footer-below {
   color: black;
 }
 
+
+
+
+                      
 div[target] {
                  color: #ced4dd;
                  position: bottom;
@@ -157,6 +160,10 @@ div[target] {
                 color: black;
 }
 
+.tumblr_images{
+    width: 200px;
+    height: 200px;
+}
 #welcome-jumbo{
   background: url(/assets/djcat.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;

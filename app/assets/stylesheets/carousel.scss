@@ -1,6 +1,7 @@
-.carousel-inner{
+body .carousel-inner{
   border: 2px ;
   border-radius: 25px;
+  
 }
 
 .menu {
@@ -14,6 +15,9 @@
 
 .youtube {
   background-color: #cc181e;
+              display: block !important;
+            margin: 0 auto !important;
+
 }
 
 .tumblr {
@@ -35,6 +39,16 @@
   margin-left: 0px;
   margin-bottom: 80px;
   width: 100%;
+  
+}
+
+#carousel-row_tumblr {
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 30px;
+  width: 100%;
+
 }
 
 .slide {
@@ -42,12 +56,6 @@
   padding-right: 50px;
 }
 
-.tumblr_images {
-                height: auto;
-                width: auto;
-                max-width: 230px;
-                max-height: 210px;
-                         }
 body .carousel-indicators .active {
   background-color: green;
 }
@@ -55,14 +63,17 @@ body .carousel-indicators .active {
 .tumblr_images { 
                 height: auto;
                 width: auto;
+                display: block;
+                margin: 0 auto;
                 max-width: 230px;
                 max-height: 210px;
                padding:1px;
                border:3px solid #5674a5;
                background-color: #5674a5;
                border-radius: 10px;
-
+               float: center !important;
                          }
+
 body .carousel-indicators {
   color: auto;
   bottom: -35px;
@@ -75,3 +86,23 @@ body .carousel-indicators {
     border: 1px solid black;  
   }
 }
+
+div[target] {
+                  color: #ced4dd!important;   
+                  width: 250px!important; 
+                  height: 100px!important;
+                  overflow: hidden!important;
+                  float: center !important;
+}
+
+.robert {
+              float: center!important;
+
+}
+
+.youtube .centering {
+  display: table;
+  margin: 0 auto;
+}
+
+
