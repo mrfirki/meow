@@ -3,61 +3,30 @@
   <head>
     <title>Meow</title>
     <%= csrf_meta_tags %>
-
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+     <!-- Load the Client component. -->
+    <!-- <script src="https://js.braintreegateway.com/web/3.11.1/js/client.min.js"></script> -->
+      <!-- Load the Hosted Fields component. -->
+    <!-- <script src="https://js.braintreegateway.com/web/3.11.1/js/hosted-fields.min.js"></script> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-     <!-- Load the Client component. -->
-    <script src="https://js.braintreegateway.com/web/3.11.1/js/client.min.js"></script>
-      <!-- Load the Hosted Fields component. -->
-    <script src="https://js.braintreegateway.com/web/3.11.1/js/hosted-fields.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto:300i,400" rel="stylesheet">
-
   </head>
 
-	<body class="body">
-
-	    <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	        <div class="container">
-	           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	                <ul class="nav navbar-nav">
-	                    <li>
-	                        <%= link_to "Home", root_path %>
-	                    </li>
-	                    <% if signed_in? %>
-	                    <li>
-	                        <%= link_to "Profile", user_path(current_user) %>
-	                    </li>
-	                </ul>
-
-	                <ul class="nav navbar-nav navbar-right">
-	                  <li >
-	                      <%= link_to "Sign out", sign_out_path, method: :delete %>
-	                  </li>
-	                </ul>
-	                    <% end %>  
-	            </div>            
-	        </div>        
-	    </nav> -->
-
-
-	      <section> 
-	   	<div >
-	      <section>
-
-	        <div id="flash">
-	          <% flash.each do |key, value| %>
-	        <div class="flash <%= key %>"><%= value %></div>
-	          <% end %>
-	        </div>
-	      </section>
-	      	<%= render "shared/header" %>
-        	<%= yield %>
-	  </body>
-        	<%= render "shared/footer" %>
-    	</div>
-	  </body>
-	</center>
+<center>
+	<body class="body" id="welcome-jumbo">
+   	<div>
+      <section>
+        <div id="flash">
+          <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+            <% end %>
+        </div>
+      </section>
+      	
+      	<%= yield %>
+      	<%= render "shared/footer" %>
+  	</div>
+  </body>
+</center>
 </html>
