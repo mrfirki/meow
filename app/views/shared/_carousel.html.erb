@@ -59,21 +59,17 @@
           <div class="item">
             <div class="row" >
               <% end %>
-                <div class="col-md-4">
-                </br>
-              </br>
-                  <div class="twitter-box">
-                    <div class="col-md-4 col-xs-4">
-                      <%= image_tag tweet.user.profile_image_uri, class: "twitter-image" %>
-                    </div>
-                    <div class="col-md-6 col-xs-6 text-left">
-                      <p class="twitter-tittle">
-                        <%= tweet.user.name %>
-                      </p>
-                    </div>
-                    <div class="col-md-12 col-xs-12">
-                      <%= tweet.text %>
-                    </div>
+                <div class="col-md-4 twitter-box">
+                  <div class="col-md-4 col-xs-4">
+                    <%= image_tag tweet.user.profile_image_uri, class: "twitter-image" %>
+                  </div>
+                  <div class="col-md-6 col-xs-6 text-left">
+                    <p class="twitter-tittle">
+                      <%= tweet.user.name %>
+                    </p>
+                  </div>
+                  <div class="col-md-12 col-xs-12">
+                    <%= tweet.text %>
                   </div>
                 </div>
             <% end %>
