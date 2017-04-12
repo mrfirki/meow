@@ -177,7 +177,7 @@
                             <% end %>
                             <div class="col-md-4">
                             <% if post.keys.include?("photos") %>
-                              <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
+                              <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images">
                             <% end %>
                             <div class="row text-center" id="carousel-row">
                             
