@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-1 col-md-offset-10" style="padding: 10px;">
-  <%= link_to(image_tag("/assets/mad.png", height: '70', width: '70'), sign_out_path, method: :delete, id: "sign-out") %>\
+  <%= link_to(image_tag("/assets/mad.png", height: '70', width: '70'), sign_out_path, method: :delete, id: "sign-out") %>
   </div>
 </div>
 
@@ -13,10 +13,10 @@
        <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %> 
       </a>
       <a href="#Carousel_2">
-        <%=  image_tag "youtube.png", :alt => "youtube", :class => "style_logo" %>
+        <%=  image_tag "youtube.png", :alt => "youtube", :class => "style_logo"%>
       </a>
       <a href="#Carousel_3">
-        <%=  image_tag "tumblr.png", :alt => "tumblr", :class => "style_logo" %>
+        <%=  image_tag "tumblr.png", :alt => "tumblr", :class => "style_logo"  %>
       </a>
     </div>
   </div>
@@ -26,14 +26,12 @@
 </br>
 </br>
 
-
 <!-- text box for carousal -->
 <div class="row">
   <div class="col-md-2 col-md-offset-5">
     <%=  image_tag "twitter.png", :alt => "twitter", :class => "style_logo"  %>
   </div>
 </div>  
-
 
   <!-- begin of carroussel -->
   <div class="row">
@@ -80,10 +78,8 @@
           </div>
 
         </div><!--.carousel-inner-->
-          <a data-slide="prev" href="#Carousel_2" class="left carousel-control"><i class="fa fa-1x fa-arrow-left" style="
-            padding-top: 15px;"></i></a>
-          <a data-slide="next" href="#Carousel_2" class="right carousel-control"><i class="fa fa-1x fa-arrow-right" style="
-            padding-top: 15px;"></i></a>
+        <a data-slide="prev" href="#Carousel_1" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#Carousel_1" class="right carousel-control">›</a>
       </div><!--.Carousel-->
     </div>
   </div>
@@ -97,11 +93,10 @@
 
 <!-- text box for carousal -->
 <div class="row">
-  <div class="col-md-2 col-md-offset-6">
+  <div class="col-md-2 col-md-offset-5">
      <%=  image_tag "youtube.png", :alt => "youtube", :class => "style_logo"%>
   </div>
 </div>  
-<!-- text box for carousal --> 
 
     <!-- begin of carroussel -->
     <div class="row">
@@ -125,8 +120,8 @@
                    <div class="item <%= "active" if index == 0 %>">
                       <div class="row" id="carousel-row">
                         <div class="col-md-8 col-md-offset-2">
-                          <h3 id="font" style="color: white;"><%= result.snippet.title %></h3>
-                          <iframe width="640" height="350" frameborder="5" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
+                          <h4><%= result.snippet.title %></h4>
+                          <iframe width="640" height="350" src="https://youtube.com/embed/<%= result.id.videoId %>" allowfullscreen="allowfullscreen"></iframe>
                         </div>
                     </div>
                   </div>
@@ -134,12 +129,8 @@
                 <% end %>
               <% end %>
           </div><!--.carousel-inner-->
-          <a data-slide="prev" href="#Carousel_2" class="left carousel-control" style="
-    margin-top: 240px;"><i class="fa fa-1x fa-arrow-left" style="
-    padding-top: 15px;"></i></a>
-          <a data-slide="next" href="#Carousel_2" class="right carousel-control" style="
-    margin-top: 240px;"><i class="fa fa-1x fa-arrow-right" style="
-    padding-top: 15px;"></i></a>
+          <a data-slide="prev" href="#Carousel_2" class="left carousel-control">‹</a>
+          <a data-slide="next" href="#Carousel_2" class="right carousel-control ">›</a>
         </div><!--.Carousel-->
       </div>
     </div>
@@ -186,7 +177,7 @@
                             <% end %>
                             <div class="col-md-4">
                             <% if post.keys.include?("photos") %>
-                              <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images">
+                              <img src="<%= post['photos'][0]['alt_sizes'].find { |photo| photo['width'] < 1000 }['url'] %>" class="tumblr_images"><br>
                             <% end %>
                             <div class="row text-center" id="carousel-row">
                             
@@ -206,10 +197,8 @@
                     </div>
 
             </div><!--.carousel-inner-->
-              <a data-slide="prev" href="#Carousel_2" class="left carousel-control"><i class="fa fa-1x fa-arrow-left" style="
-                padding-top: 15px;"></i></a>
-              <a data-slide="next" href="#Carousel_2" class="right carousel-control"><i class="fa fa-1x fa-arrow-right" style="
-                padding-top: 15px;"></i></a>
+            <a data-slide="prev" href="#Carousel_3" class="left carousel-control">‹</a>
+            <a data-slide="next" href="#Carousel_3" class="right carousel-control">›</a>
         </div><!--.Carousel-->
       </div>
 
