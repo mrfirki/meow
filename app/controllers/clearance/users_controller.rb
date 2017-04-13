@@ -15,11 +15,12 @@ class Clearance::UsersController < Clearance::BaseController
   end
 
   def create
+    # byebug
     @user = User.new(user_params)
 
     if @user.save
       sign_in @user
-      redirect_back_or url_after_create
+      redirect_to root_path
     else
       @message = @user.errors.full_messages
       render :json => @message.to_json
