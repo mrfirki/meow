@@ -1,10 +1,5 @@
-require 'google/api_client'
-require 'trollop'
-
-class WelcomeController < ApplicationController
-	before_action :check_if_logged_in?, only: :index
-
- 	def index
+class SpecialController < ApplicationController
+	def index
 		@search_results = search_video
 	end
 
