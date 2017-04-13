@@ -9,22 +9,17 @@
 }
 
 
-.youtube {
-  background-color: #cc181e;
-              display: block !important;
-            margin: 0 auto !important;
 
-}
 
 .tumblr {
   background-color:  #35465c;
 }
 
 .carousel-control {
-  margin-top: 90px;
-  height: 40px;
-  width: 40px !important;
-  border-radius: 23px;
+  margin-top: 150px;
+  height: 60px;
+  width: 60px !important;
+  border-radius: 50px;
   border: 4px solid white;
   background-color: black;
 }
@@ -103,3 +98,6 @@ div[target] {
 }
 
 
+#font {
+  font-family: 'Press Start 2P', cursive;
+}
