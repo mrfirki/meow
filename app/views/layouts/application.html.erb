@@ -14,8 +14,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<center>
-	<body class="body" id="welcome-jumbo">
+
+	<body class="body" id="welcome-jumbo" style="
+    overflow-x: hidden !important; max-width: 100% !important;">
    	<div>
       <section>
         <div id="flash">
@@ -29,5 +30,5 @@
       	<%= render "shared/footer" %>
   	</div>
   </body>
-</center>
+
 </html>
