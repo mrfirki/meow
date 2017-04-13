@@ -36,6 +36,11 @@
   background-color: black;
 }
 
+.carousel-control.right {
+    left: auto;
+    right: -10px;
+}
+
 
 #carousel-row {
   margin-top: 30px;
@@ -107,6 +112,9 @@ div[target] {
 }
 
 
+
 #font {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Audiowide', cursive;
+  font-family: 'VT323', monospace;
+  font-family: 'Amaranth', sans-serif;
 }
