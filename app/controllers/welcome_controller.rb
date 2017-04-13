@@ -44,7 +44,7 @@ class WelcomeController < ApplicationController
 			  	:order => 'date',
 			    :part => 'snippet',
 			  	:q => 'funny cats',
-			    :maxResults => opts[:max_results]
+			    :maxResults => 5
 			  }
 			)
 
