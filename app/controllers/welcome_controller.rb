@@ -27,12 +27,12 @@ class WelcomeController < ApplicationController
 	end
 
 	def search_video
-		opts = Trollop::options do
-		    opt :q, 'Search term', :type => String, :default => 'cats'
-		    opt :max_results, 'Max results', :type => :int, :default => 5
-		  end
+		# opts = Trollop::options do
+		#     opt :q, 'Search term', :type => String, :default => 'cats'
+		#     opt :max_results, 'Max results', :type => :int, :default => 5
+		#   end
 
-	    client, youtube = get_service
+	  client, youtube = get_service
 
 		begin
 		# Call the search.list method to retrieve results matching the specified
